@@ -9,23 +9,102 @@
         content="Tayland’da benzersiz bir kahve deneyimi yaşayın! Komiserin Yeri’nde Türk kahvesi, taze demlenmiş kahveler ve lezzetli tatlılar sizi bekliyor.">
     <meta name="keywords"
         content="Türk kahvesi Tayland, Tayland kahve, Komiserin Yeri, Pattani Türk kahvesi, Tayland tatlı, kahve dükkanı">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0c1b3',
+                            400: '#d3a08b',
+                            500: '#8b5e3c',
+                            600: '#7a5234',
+                            700: '#66442b',
+                            800: '#523623',
+                            900: '#3e291a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
-<body class="bg-yellow-50 flex items-center justify-center min-h-screen">
+<body class="bg-coffee-50 text-coffee-900 font-sans">
 
-    <div class="bg-white p-8 rounded-3xl shadow-lg w-11/12 max-w-sm text-center">
-        <img src="https://via.placeholder.com/100" alt="Kafe Logo"
-            class="w-24 h-24 mx-auto rounded-full mb-4 border-4 border-yellow-300">
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-coffee-100">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000"
+                alt="Coffee Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/50 to-coffee-100/80"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 animate-fade-in">
+            <div class="relative inline-block mb-8">
+                <div class="absolute inset-0 bg-coffee-500 blur-2xl opacity-20 rounded-full"></div>
+                <img src="./image.png" alt="Komiserin Yeri Logo"
+                    class="relative w-32 h-32 mx-auto rounded-full border-4 border-white shadow-xl bg-white p-2">
+            </div>
+            <h2 class="text-5xl md:text-7xl font-serif font-bold mb-4 text-coffee-800 tracking-tight">Komiserin Yeri
+            </h2>
+            <p class="text-xl md:text-2xl mb-10 font-medium text-coffee-600 max-w-2xl mx-auto">
+                Tayland’da Geleneksel Türk Kahvesi ve <br class="hidden sm:block"> Eşsiz Lezzetlerin Buluşma Noktası
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#menu"
+                    class="bg-coffee-500 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-coffee-600 transition shadow-lg hover:shadow-coffee-500/30">
+                    Menüyü İncele
+                </a>
+                <a href="#location"
+                    class="bg-white text-coffee-800 border-2 border-coffee-100 px-10 py-4 rounded-2xl text-lg font-bold hover:bg-coffee-50 transition shadow-md">
+                    Yol Tarifi Al
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <h1 class="text-2xl font-bold mb-2 text-yellow-800">Komiserin Yeri</h1>
-        <p class="text-gray-600 mb-6">En lezzetli kahveler ve yemekler burada!</p>
 
-        <a href="https://qr_order-c1og21.th.biot-apps.com/goodsList?store_id=S002604295190036095&table_number=1001"
-            class="block bg-yellow-300 hover:bg-yellow-400 text-yellow-900 font-semibold py-3 rounded-xl mb-3 transition">Menümüz</a>
-        <a href="https://maps.app.goo.gl/WC6itCZXyjE5wjSPA"
-            class="block bg-yellow-300 hover:bg-yellow-400 text-yellow-900 font-semibold py-3 rounded-xl mb-3 transition">Konum</a>
-    </div>
 
 </body>
 
