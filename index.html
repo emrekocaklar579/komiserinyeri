@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komiserin Yeri – Tayland’da Türk Kahvesi ve Lezzetli Yemekler</title>
-    <meta name="description"
+
+    <!-- SEO -->
+    <title id="page-title">Komiserin Yeri – Tayland’da Türk Kahvesi ve Lezzetli Yemekler</title>
+
+    <meta id="meta-description" name="description"
         content="Tayland’da benzersiz bir kahve deneyimi yaşayın! Komiserin Yeri’nde Türk kahvesi, taze demlenmiş kahveler ve lezzetli tatlılar sizi bekliyor.">
-    <meta name="keywords"
+
+    <meta id="meta-keywords" name="keywords"
         content="Türk kahvesi Tayland, Tayland kahve, Komiserin Yeri, Pattani Türk kahvesi, Tayland tatlı, kahve dükkanı">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -43,6 +49,7 @@
             }
         }
     </script>
+
     <style>
         @keyframes fadeIn {
             from {
@@ -74,45 +81,160 @@
 
 <body class="bg-coffee-50 text-coffee-900 font-sans">
 
+    <!-- LANGUAGE SWITCH -->
+    <div class="fixed top-5 right-5 z-50 flex gap-2">
+        <button onclick="setLanguage('tr')"
+            class="bg-white px-4 py-2 rounded-xl shadow font-semibold hover:bg-coffee-100">
+            TR
+        </button>
+
+        <button onclick="setLanguage('en')"
+            class="bg-white px-4 py-2 rounded-xl shadow font-semibold hover:bg-coffee-100">
+            EN
+        </button>
+
+        <button onclick="setLanguage('th')"
+            class="bg-white px-4 py-2 rounded-xl shadow font-semibold hover:bg-coffee-100">
+            ไทย
+        </button>
+    </div>
+
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+
         <div class="absolute inset-0 z-0 bg-coffee-100">
             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000"
                 alt="Coffee Background" class="w-full h-full object-cover opacity-20">
+
             <div class="absolute inset-0 bg-gradient-to-b from-white/50 to-coffee-100/80"></div>
         </div>
+
         <div class="relative z-10 text-center px-6 animate-fade-in">
+
             <div class="relative inline-block mb-8">
                 <div class="absolute inset-0 bg-coffee-500 blur-2xl opacity-20 rounded-full"></div>
+
                 <img src="./image.png" alt="Komiserin Yeri Logo"
                     class="relative w-32 h-32 mx-auto rounded-full border-4 border-white shadow-xl bg-white p-2">
             </div>
-            <h2 class="text-5xl md:text-7xl font-serif font-bold mb-4 text-coffee-800 tracking-tight">Komiserin Yeri
+
+            <h2 id="hero-title"
+                class="text-5xl md:text-7xl font-serif font-bold mb-4 text-coffee-800 tracking-tight">
+                Komiserin Yeri
             </h2>
-            <p class="text-xl md:text-2xl mb-10 font-medium text-coffee-600 max-w-2xl mx-auto">
-                Tayland’da Geleneksel Türk Kahvesi ve <br class="hidden sm:block"> Eşsiz Lezzetlerin Buluşma Noktası
+
+            <p id="hero-description"
+                class="text-xl md:text-2xl mb-10 font-medium text-coffee-600 max-w-2xl mx-auto">
+                Tayland’da Geleneksel Türk Kahvesi ve
+                <br class="hidden sm:block">
+                Eşsiz Lezzetlerin Buluşma Noktası
             </p>
+
             <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="https://qr_order-c1og21.th.biot-apps.com/goodsList?store_id=S002604295190036095"
+
+                <a id="menu-btn"
+                    href="https://qr_order-c1og21.th.biot-apps.com/goodsList?store_id=S002604295190036095"
                     class="bg-coffee-500 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-coffee-600 transition shadow-lg hover:shadow-coffee-500/30">
                     Menüyü İncele
                 </a>
-                <a href="https://maps.app.goo.gl/uVmTJ1GNyAWGeh89A"
+
+                <a id="map-btn"
+                    href="https://maps.app.goo.gl/uVmTJ1GNyAWGeh89A"
                     class="bg-white text-coffee-800 border-2 border-coffee-100 px-10 py-4 rounded-2xl text-lg font-bold hover:bg-coffee-50 transition shadow-md">
                     Yol Tarifi Al
                 </a>
-                <a href="https://forms.gle/QYmVLhbVTLkR1mzXA"
+
+                <a id="product-btn"
+                    href="https://forms.gle/QYmVLhbVTLkR1mzXA"
                     class="bg-coffee-700 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-coffee-800 transition shadow-lg hover:shadow-coffee-700/30">
                     Ürün Getiricem
                 </a>
-                <a href="https://r.grab.com/o/7J7J3I7r"
+
+                <a id="grab-btn"
+                    href="https://r.grab.com/o/7J7J3I7r"
                     class="bg-green-600 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-green-700 transition shadow-lg hover:shadow-green-600/30">
                     Grab Linki
                 </a>
+
             </div>
         </div>
     </section>
 
+    <script>
+        const translations = {
+            tr: {
+                title: "Komiserin Yeri – Tayland’da Türk Kahvesi ve Lezzetli Yemekler",
+                description: "Tayland’da benzersiz bir kahve deneyimi yaşayın! Komiserin Yeri’nde Türk kahvesi, taze demlenmiş kahveler ve lezzetli tatlılar sizi bekliyor.",
+                keywords: "Türk kahvesi Tayland, Tayland kahve, Komiserin Yeri, Pattani Türk kahvesi, Tayland tatlı, kahve dükkanı",
 
+                heroTitle: "Komiserin Yeri",
+                heroDesc: "Tayland’da Geleneksel Türk Kahvesi ve Eşsiz Lezzetlerin Buluşma Noktası",
+
+                menu: "Menüyü İncele",
+                map: "Yol Tarifi Al",
+                product: "Ürün Getiricem",
+                grab: "Grab Linki"
+            },
+
+            en: {
+                title: "Komiserin Yeri – Turkish Coffee & Delicious Food in Thailand",
+                description: "Experience authentic Turkish coffee in Thailand! Fresh coffee, desserts, and delicious meals await you at Komiserin Yeri.",
+                keywords: "Turkish coffee Thailand, Thailand cafe, Komiserin Yeri, Pattani Turkish coffee, desserts Thailand",
+
+                heroTitle: "Komiserin Yeri",
+                heroDesc: "Traditional Turkish Coffee & Unique Flavors in Thailand",
+
+                menu: "View Menu",
+                map: "Get Directions",
+                product: "I Will Bring Products",
+                grab: "Grab Link"
+            },
+
+            th: {
+                title: "Komiserin Yeri – กาแฟตุรกีและอาหารอร่อยในประเทศไทย",
+                description: "สัมผัสประสบการณ์กาแฟตุรกีแท้ในประเทศไทย พร้อมกาแฟสด ของหวาน และอาหารอร่อยที่ Komiserin Yeri",
+                keywords: "กาแฟตุรกี ไทย คาเฟ่ตุรกี Pattani coffee Thailand",
+
+                heroTitle: "Komiserin Yeri",
+                heroDesc: "กาแฟตุรกีดั้งเดิม และรสชาติสุดพิเศษในประเทศไทย",
+
+                menu: "ดูเมนู",
+                map: "ดูเส้นทาง",
+                product: "ฉันจะนำสินค้าไป",
+                grab: "ลิงก์ Grab"
+            }
+        };
+
+        function setLanguage(lang) {
+
+            const t = translations[lang];
+
+            document.documentElement.lang = lang;
+
+            // SEO
+            document.title = t.title;
+
+            document.getElementById("meta-description")
+                .setAttribute("content", t.description);
+
+            document.getElementById("meta-keywords")
+                .setAttribute("content", t.keywords);
+
+            // CONTENT
+            document.getElementById("hero-title").innerText = t.heroTitle;
+            document.getElementById("hero-description").innerText = t.heroDesc;
+
+            document.getElementById("menu-btn").innerText = t.menu;
+            document.getElementById("map-btn").innerText = t.map;
+            document.getElementById("product-btn").innerText = t.product;
+            document.getElementById("grab-btn").innerText = t.grab;
+
+            localStorage.setItem("site-language", lang);
+        }
+
+        // AUTO LOAD SAVED LANGUAGE
+        const savedLang = localStorage.getItem("site-language") || "tr";
+        setLanguage(savedLang);
+    </script>
 
 </body>
 
