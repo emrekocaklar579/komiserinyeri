@@ -358,6 +358,42 @@
       </div>
     </section>
 
+    <footer class="py-8 px-6 bg-coffee-100 border-t border-coffee-200">
+      <div class="max-w-3xl mx-auto text-center">
+        <p
+          id="footer-policy-label"
+          class="text-sm text-coffee-600 mb-3"
+        >
+          İşletme politikaları
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+          <a
+            id="footer-policy-tr"
+            href="business-policy-tr.html"
+            class="text-coffee-700 hover:text-coffee-500 transition underline-offset-2 hover:underline"
+          >
+            İş Politikası (TR)
+          </a>
+          <span class="text-coffee-300">|</span>
+          <a
+            id="footer-policy-en"
+            href="business-policy-en.html"
+            class="text-coffee-700 hover:text-coffee-500 transition underline-offset-2 hover:underline"
+          >
+            Business Policy (EN)
+          </a>
+          <span class="text-coffee-300">|</span>
+          <a
+            id="footer-policy-th"
+            href="business-policy-th.html"
+            class="text-coffee-700 hover:text-coffee-500 transition underline-offset-2 hover:underline"
+          >
+            นโยบายทางธุรกิจ (TH)
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <script>
       const translations = {
         tr: {
@@ -384,6 +420,11 @@
           contactAddress: "Adres",
           contactPhone: "Telefon",
           contactEmail: "E-posta",
+
+          footerPolicyLabel: "İşletme politikaları",
+          footerPolicyTr: "İş Politikası (TR)",
+          footerPolicyEn: "İş Politikası (EN)",
+          footerPolicyTh: "İş Politikası (TH)",
         },
 
         en: {
@@ -407,6 +448,11 @@
           contactAddress: "Address",
           contactPhone: "Phone",
           contactEmail: "Email",
+
+          footerPolicyLabel: "Business policies",
+          footerPolicyTr: "Business Policy (TR)",
+          footerPolicyEn: "Business Policy (EN)",
+          footerPolicyTh: "Business Policy (TH)",
         },
 
         th: {
@@ -429,6 +475,11 @@
           contactAddress: "ที่อยู่",
           contactPhone: "โทรศัพท์",
           contactEmail: "อีเมล",
+
+          footerPolicyLabel: "นโยบายทางธุรกิจ",
+          footerPolicyTr: "นโยบายทางธุรกิจ (TR)",
+          footerPolicyEn: "Business Policy (EN)",
+          footerPolicyTh: "นโยบายทางธุรกิจ (TH)",
         },
       };
 
@@ -467,6 +518,15 @@
           t.contactPhone;
         document.getElementById("contact-email-label").innerText =
           t.contactEmail;
+
+        document.getElementById("footer-policy-label").innerText =
+          t.footerPolicyLabel;
+        document.getElementById("footer-policy-tr").innerText =
+          t.footerPolicyTr;
+        document.getElementById("footer-policy-en").innerText =
+          t.footerPolicyEn;
+        document.getElementById("footer-policy-th").innerText =
+          t.footerPolicyTh;
 
         localStorage.setItem("site-language", lang);
       }
